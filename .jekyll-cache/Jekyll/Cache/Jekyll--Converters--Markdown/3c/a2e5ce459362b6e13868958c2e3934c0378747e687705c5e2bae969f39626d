@@ -1,14 +1,0 @@
-I"<h1 id="rclone---rsync-for-cloud-storage">rclone - rsync for cloud storage</h1>
-
-<p>Write here about rclone</p>
-
-<p>topics:
-rclone config
-rclone sync
-rclone copy
-flags: -P, –dry-run, -i, –transfers, –backup-dir
-rclone delete
-rclone purge
-rclone ls
-rclone lsd</p>
-:ET
