@@ -1,0 +1,12 @@
+theme: minima
+title: obtuse.dev
+author:
+  name: obtusedev
+set_excerpts: false
+
+minima:
+  date_format: "%B %-d, %Y | %Y-%m-%d"
+
+  # generate social links in footer
+  social_links:
+    github: https://github.com/obtusedev
