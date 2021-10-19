@@ -1,54 +1,63 @@
-html {
-  font-size: $base-font-size;
-}
-
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
-
 }
-
-
 
 /**
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+    $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  overflow-wrap: break-word;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
-}
-
-hr {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
 }
 
 /**
@@ -58,8 +67,6 @@ main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
-
-
 /**
  * Images
  */
@@ -67,8 +74,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -81,12 +86,11 @@ figcaption {
   font-size: $small-font-size;
 }
 
-
-
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: $spacing-unit;
 }
 
@@ -97,30 +101,31 @@ li {
   }
 }
 
-
-
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: $base-font-weight;
 }
-
-
 
 /**
  * Links
  */
 a {
-  color: $link-base-color;
+  color: $brand-color;
   text-decoration: none;
 
   &:visited {
-    color: $link-visited-color;
+    color: darken($brand-color, 15%);
   }
 
   &:hover {
-    color: $link-hover-color;
+    color: $text-color;
     text-decoration: underline;
   }
 
@@ -133,38 +138,31 @@ a {
   }
 }
 
-
 /**
  * Blockquotes
  */
 blockquote {
-  color: $brand-color;
-  border-left: 4px solid $border-color-01;
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
+  letter-spacing: -1px;
   font-style: italic;
 
   > :last-child {
     margin-bottom: 0;
   }
-
-  i, em {
-    font-style: normal;
-  }
 }
-
-
 
 /**
  * Code formatting
  */
 pre,
 code {
-  font-family: $code-font-family;
-  font-size: 0.9375em;
-  border: 1px solid $border-color-01;
+  @include relative-font-size(0.9375);
+  border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: $code-background-color;
+  background-color: #eef;
 }
 
 code {
@@ -182,37 +180,25 @@ pre {
   }
 }
 
-.highlight {
-  border-radius: 3px;
-  background: $code-background-color;
-  @extend %vertical-rhythm;
-
-  .highlighter-rouge & {
-    background: $code-background-color;
-  }
-}
-
-
-
 /**
  * Wrapper
  */
 .wrapper {
-  max-width: calc(#{$content-width} - (#{$spacing-unit}));
+  max-width: -webkit-calc(#{$content-width} + (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} + (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
   @extend %clearfix;
 
-  @media screen and (min-width: $on-large) {
-    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
   }
 }
-
-
 
 /**
  * Clearfix
@@ -223,29 +209,24 @@ pre {
   clear: both;
 }
 
-
-
 /**
  * Icons
  */
 
-.orange {
-  color: #f66a0a;
-}
-
-.grey {
-  color: #828282;
-}
-
 .svg-icon {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   display: inline-block;
-  fill: currentColor;
-  padding: 5px 3px 2px 5px;
-  vertical-align: text-bottom;
+  fill: #{$grey-color};
+  padding-right: 2px;
+  vertical-align: text-top;
 }
 
+.social-media-list {
+  li + li {
+    padding-top: 5px;
+  }
+}
 
 /**
  * Tables
@@ -254,29 +235,24 @@ table {
   margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
-  color: $table-text-color;
+  color: lighten($text-color, 18%);
   border-collapse: collapse;
-  border: 1px solid $table-border-color;
+  border: 1px solid $grey-color-light;
   tr {
     &:nth-child(even) {
-      background-color: $table-zebra-color;
+      background-color: lighten($grey-color-light, 6%);
     }
   }
-  th, td {
+  th,
+  td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: $table-header-bg-color;
-    border: 1px solid $table-header-border;
+    background-color: lighten($grey-color-light, 3%);
+    border: 1px solid darken($grey-color-light, 4%);
+    border-bottom-color: darken($grey-color-light, 12%);
   }
   td {
-    border: 1px solid $table-border-color;
-  }
-
-  @include media-query($on-laptop) {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-            -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid $grey-color-light;
   }
 }

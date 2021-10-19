@@ -1,6 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-10-17T21:07:52-04:00</updated><id>/feed.xml</id><title type="html">obtuse.dev</title><author><name>obtusedev</name></author><entry><title type="html">Jekyll</title><link href="/2021/08/28/jekyll.html" rel="alternate" type="text/html" title="Jekyll" /><published>2021-08-28T00:00:00-04:00</published><updated>2021-08-28T00:00:00-04:00</updated><id>/2021/08/28/jekyll</id><content type="html" xml:base="/2021/08/28/jekyll.html">&lt;h1 id=&quot;jekyll-generator&quot;&gt;Jekyll Generator&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-10-19T11:45:34-04:00</updated><id>/feed.xml</id><title type="html">obtuse.dev</title><subtitle>Hi, I'm obtusedev a self-taught software developer. My focus is backend &amp; devops. Thanks for stopping by.
+</subtitle><author><name>obtusedev</name></author><entry><title type="html">Jekyll</title><link href="/2021/08/28/jekyll.html" rel="alternate" type="text/html" title="Jekyll" /><published>2021-08-28T00:00:00-04:00</published><updated>2021-08-28T00:00:00-04:00</updated><id>/2021/08/28/jekyll</id><content type="html" xml:base="/2021/08/28/jekyll.html">&lt;h1 id=&quot;jekyll-generator&quot;&gt;Jekyll Generator&lt;/h1&gt;
 
-&lt;p&gt;Write here about Jejyll.&lt;/p&gt;</content><author><name>obtusedev</name></author><summary type="html">Jekyll Generator</summary></entry><entry><title type="html">Rclone</title><link href="/2021/08/27/rclone.html" rel="alternate" type="text/html" title="Rclone" /><published>2021-08-27T00:00:00-04:00</published><updated>2021-08-27T00:00:00-04:00</updated><id>/2021/08/27/rclone</id><content type="html" xml:base="/2021/08/27/rclone.html">&lt;h1 id=&quot;rclone---rsync-for-cloud-storage&quot;&gt;rclone - rsync for cloud storage&lt;/h1&gt;
+&lt;p&gt;Write here about Jejyll.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll build&lt;/code&gt;&lt;br /&gt;
+https://stackoverflow.com/questions/51157446/whats-the-difference-between-bundle-exec-jekyll-serve-and-jekyll-serve&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;relative_url&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>obtusedev</name></author><summary type="html">Jekyll Generator</summary></entry><entry><title type="html">Rclone</title><link href="/2021/08/27/rclone.html" rel="alternate" type="text/html" title="Rclone" /><published>2021-08-27T00:00:00-04:00</published><updated>2021-08-27T00:00:00-04:00</updated><id>/2021/08/27/rclone</id><content type="html" xml:base="/2021/08/27/rclone.html">&lt;h1 id=&quot;rclone---rsync-for-cloud-storage&quot;&gt;rclone - rsync for cloud storage&lt;/h1&gt;
 
 &lt;p&gt;Write here about rclone&lt;/p&gt;
 

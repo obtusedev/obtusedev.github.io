@@ -1,4 +1,14 @@
-# WIP
+# Github Pages Portfolio  
 
-`bundle exec jekyll build`
-https://stackoverflow.com/questions/51157446/whats-the-difference-between-bundle-exec-jekyll-serve-and-jekyll-serve
+### To visit go to https://obtuse.dev or https://www.obtuse.dev  
+This is still a WIP(work in progress) meaning it is not complete  
+
+## TODO  
+TODO: add more social media to footer
+TODO: home page
+  - posts
+  - programs
+  - scripts
+TODO: add dark mode toggle
+TODO: current status box
+TODO: add more posts
