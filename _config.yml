@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "show_excerpts:"
   Hi, I'm obtusedev a self-taught software developer. My focus is backend & devops. Thanks for stopping by.
 
 minima:
-  date_format: "%B %-d, %Y | %Y-%m-%d"
+  date_format: "%B %-d, %Y"
 
   # generate social links in footer
   social_links:
