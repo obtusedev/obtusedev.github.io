@@ -1,0 +1,56 @@
+baseURL = 'https://obtuse.dev'
+languageCode = 'en-us'
+defaultContentLanguage = 'en'
+title = 'obtusedev'
+theme = 'hermit'
+pygmentsCodefences = true
+pygmentsUseClasses = true
+rssLimit = 10
+enableEmoji = true
+
+[author]
+    name = 'obtusedev'
+
+[taxonomies]
+    tag = 'tags'
+
+[params]
+
+    dateform = 'Jan 2, 2006'
+    dateformShort = 'Jan 2'
+    dateformNum = '2006-01-02'
+    dateformNumTime = '2006-01-02 15:04 -0700'
+
+    homeSubtitle = 'Web developer with an interest in DevOps'
+
+    themeColor = '#494F5C'
+
+    relatedPosts = false
+    bgImg = '' # homepage image url
+
+    code_copy_button = true
+
+    [[params.social]]
+        name = 'github'
+        url = 'https://github.com/obtusedev'
+    
+    #[[params.social]]
+        #name = 'email'
+        #url = 'mailto:example@gmail.com'
+
+[menu]
+
+    [[menu.main]]
+        name = 'Posts'
+        url = 'posts'
+        weight = 10
+
+    [[menu.main]]
+        name = 'About'
+        url = 'about'
+        weight = 20
+
+    [[menu.main]]
+        name = 'Tags'
+        url = 'tags'
+        weight = 30

@@ -1,13 +1,5 @@
+# My Portfolio
 
-
-To run:  
-```commandline
-bundle exec jekyll serve
-```
-
-To view:  
-https://obtuse.dev or https://www.obtuse.dev
-
-## TODO
-* page for showcasing websites
-* add dark mode toggle
+hugo server - run locally
+hugo -D - build static pages
+hugo new posts/post-name.md - generate new post
