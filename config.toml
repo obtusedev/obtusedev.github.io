@@ -44,13 +44,18 @@ enableEmoji = true
         name = 'Posts'
         url = 'posts'
         weight = 10
+    
+    [[menu.main]]
+        name = 'Snippets'
+        url = 'snippets'
+        weight = 20
 
     [[menu.main]]
         name = 'About'
         url = 'about'
-        weight = 20
+        weight = 30
 
     [[menu.main]]
         name = 'Tags'
         url = 'tags'
-        weight = 30
+        weight = 40
