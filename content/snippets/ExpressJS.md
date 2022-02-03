@@ -1,5 +1,12 @@
 ---
 title: "ExpressJS"
+date: 2022-02-02
+draft: false
+toc: true
+tags:
+    - express
+    - javascript
+    - snippets
 ---
 
 App setup:

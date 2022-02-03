@@ -4,7 +4,7 @@ date: 2022-02-02
 draft: false
 toc: true
 tags:
-    - Vue
+    - vue
     - snippets
 ---
 
