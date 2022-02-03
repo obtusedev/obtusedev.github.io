@@ -1,5 +1,11 @@
 ---
 title: "Vue 3"
+date: 2022-02-02
+draft: false
+toc: true
+tags:
+    - Vue
+    - snippets
 ---
 
 Preventing template from rendering:
