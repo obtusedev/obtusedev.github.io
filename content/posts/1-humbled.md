@@ -11,7 +11,7 @@ tags:
 Went through a course for Go and saw a section on Go comments. Here I thought it was easy and that I knew everything there was about comments in Go. `//` and `/**/` inline blocks and block comments.  
 
 I stand corrected and now I understand the depth of comments in Go.
-That the comments must end in a period, immediately precede a declaration and start with the name of the item you are documenting.
+That the documentation comments must end in a period, immediately precede a declaration and start with the name of the item you are documenting.
 
 `godoc` to generate the documentations
 
