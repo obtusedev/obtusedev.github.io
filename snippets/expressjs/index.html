@@ -6,21 +6,27 @@
 <meta name=theme-color content="#494F5C">
 <meta name=msapplication-TileColor content="#494F5C">
 <meta itemprop=name content="ExpressJS">
-<meta itemprop=description content="App setup:
+<meta itemprop=description content="Controllers and Middleware: from my understanding a controller is a middleware for a single route and middleware is for several routes. The order of your middlware is very important.
+// middleware app.use(express.json()); // controller app.get(&#34;/user/:id&#34;, getSingleUserById); App setup:
 import express from &#34;express&#34;; const app = express(); const port = 3000; app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); app.listen(port, () => { console.log(`app running on localhost:${port}`); }); Basic route:
-app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); ">
-<meta itemprop=wordCount content="39">
-<meta itemprop=keywords content><meta property="og:title" content="ExpressJS">
-<meta property="og:description" content="App setup:
+app.get(&#34;/&#34;, (req, res) => { res."><meta itemprop=datePublished content="2022-02-02T00:00:00+00:00">
+<meta itemprop=dateModified content="2022-02-02T00:00:00+00:00">
+<meta itemprop=wordCount content="208">
+<meta itemprop=keywords content="express,javascript,snippets,"><meta property="og:title" content="ExpressJS">
+<meta property="og:description" content="Controllers and Middleware: from my understanding a controller is a middleware for a single route and middleware is for several routes. The order of your middlware is very important.
+// middleware app.use(express.json()); // controller app.get(&#34;/user/:id&#34;, getSingleUserById); App setup:
 import express from &#34;express&#34;; const app = express(); const port = 3000; app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); app.listen(port, () => { console.log(`app running on localhost:${port}`); }); Basic route:
-app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); ">
+app.get(&#34;/&#34;, (req, res) => { res.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://obtuse.dev/snippets/expressjs/"><meta property="article:section" content="snippets">
+<meta property="article:published_time" content="2022-02-02T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-02-02T00:00:00+00:00">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="ExpressJS">
-<meta name=twitter:description content="App setup:
+<meta name=twitter:description content="Controllers and Middleware: from my understanding a controller is a middleware for a single route and middleware is for several routes. The order of your middlware is very important.
+// middleware app.use(express.json()); // controller app.get(&#34;/user/:id&#34;, getSingleUserById); App setup:
 import express from &#34;express&#34;; const app = express(); const port = 3000; app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); app.listen(port, () => { console.log(`app running on localhost:${port}`); }); Basic route:
-app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); ">
+app.get(&#34;/&#34;, (req, res) => { res.">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
@@ -45,7 +51,7 @@ app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); ">
 </nav>
 </div>
 <div class="hdr-right hdr-icons">
-<span class="hdr-social hide-in-mobile"><a href=https://github.com/obtusedev target=_blank rel="noopener me" title=Github><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a></span><button id=menu-btn class=hdr-btn title=Menu><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+<button id=toc-btn class="hdr-btn desktop-only-ib" title="Table of Contents"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3" y2="6"/><line x1="3" y1="12" x2="3" y2="12"/><line x1="3" y1="18" x2="3" y2="18"/></svg></button><span class="hdr-social hide-in-mobile"><a href=https://github.com/obtusedev target=_blank rel="noopener me" title=Github><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></a></span><button id=menu-btn class=hdr-btn title=Menu><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
 </div>
 </div>
 </header>
@@ -60,7 +66,12 @@ app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); ">
 <main class="site-main section-inner thin animated fadeIn faster">
 <h1>ExpressJS</h1>
 <div class=content>
-<p>App setup:</p>
+<p>Controllers and Middleware: from my understanding a controller is a middleware for a single route and middleware is for several routes. The order of your middlware is very important.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=c1>// middleware
+</span><span class=c1></span><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>express</span><span class=p>.</span><span class=nx>json</span><span class=p>());</span>
+<span class=c1>// controller
+</span><span class=c1></span><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s2>&#34;/user/:id&#34;</span><span class=p>,</span> <span class=nx>getSingleUserById</span><span class=p>);</span>
+</code></pre></div><p>App setup:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>import</span> <span class=nx>express</span> <span class=nx>from</span> <span class=s2>&#34;express&#34;</span><span class=p>;</span>
 <span class=kr>const</span> <span class=nx>app</span> <span class=o>=</span> <span class=nx>express</span><span class=p>();</span>
 <span class=kr>const</span> <span class=nx>port</span> <span class=o>=</span> <span class=mi>3000</span><span class=p>;</span>
@@ -76,6 +87,37 @@ app.get(&#34;/&#34;, (req, res) => { res.send(&#34;hi&#34;); }); ">
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s2>&#34;/&#34;</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
     <span class=nx>res</span><span class=p>.</span><span class=nx>send</span><span class=p>(</span><span class=s2>&#34;hi&#34;</span><span class=p>);</span>
 <span class=p>});</span>
+</code></pre></div><p>Importing routes:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kr>const</span> <span class=nx>userRoute</span> <span class=o>=</span> <span class=nx>require</span><span class=p>(</span><span class=s2>&#34;./route/user.js&#34;</span><span class=p>);</span>
+<span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=s2>&#34;/user&#34;</span><span class=p>,</span> <span class=nx>userRoute</span><span class=p>);</span>
+<span class=c1>// shortcut without the import statement in beginning
+</span><span class=c1></span><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=s2>&#34;/user&#34;</span><span class=p>,</span> <span class=nx>require</span><span class=p>(</span><span class=s2>&#34;./route/user.js&#34;</span><span class=p>));</span>
+</code></pre></div><p><code>express.json()</code> and <code>express.urlencoded()</code> is only needed for <code>POST</code> and <code>PUT</code> requests where you need to parse json body data.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=c1>// npm install body-parser
+</span><span class=c1>// express v4.15.0 and older
+</span><span class=c1></span><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>bodyParser</span><span class=p>.</span><span class=nx>json</span><span class=p>());</span>
+<span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>bodyParser</span><span class=p>.</span><span class=nx>urlencoded</span><span class=p>({</span> <span class=nx>extended</span><span class=o>:</span> <span class=kc>false</span> <span class=p>}));</span> <span class=c1>// extended true if you are using qs module
+</span><span class=c1></span>
+<span class=c1>// https://github.com/expressjs/express/releases/tag/4.16.0
+</span><span class=c1>// express v4.16.0 and newer
+</span><span class=c1></span><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>express</span><span class=p>.</span><span class=nx>json</span><span class=p>());</span>
+<span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>express</span><span class=p>.</span><span class=nx>urlencoded</span><span class=p>({</span> <span class=nx>extended</span><span class=o>:</span> <span class=kc>false</span> <span class=p>}));</span> <span class=c1>// extended true if you are using qs module
+</span></code></pre></div><p>Setting environment variables in <code>package.json</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=s2>&#34;scripts&#34;</span><span class=err>:</span> <span class=p>{</span>
+    <span class=nt>&#34;dev&#34;</span><span class=p>:</span> <span class=s2>&#34;NODE_ENV=development nodemon app.js&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;prod&#34;</span><span class=p>:</span> <span class=s2>&#34;NODE_ENV=production LOGGING=off nodemon app.js&#34;</span>
+<span class=p>}</span>
+</code></pre></div><p>Global variables <code>__dirname</code> & <code>__filename</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=c1>// CommonJS
+</span><span class=c1></span>
+<span class=kd>let</span> <span class=nx>file</span> <span class=o>=</span> <span class=nx>__filename</span><span class=p>;</span>
+<span class=kd>let</span> <span class=nx>here</span> <span class=o>=</span> <span class=nx>__dirname</span><span class=p>;</span>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=c1>// ES6
+</span><span class=c1></span><span class=kr>import</span> <span class=p>{</span> <span class=nx>fileURLToPath</span> <span class=p>}</span> <span class=nx>from</span> <span class=s2>&#34;url&#34;</span><span class=p>;</span>
+<span class=kr>import</span> <span class=nx>path</span> <span class=nx>from</span> <span class=s2>&#34;path&#34;</span><span class=p>;</span>
+
+<span class=kr>const</span> <span class=nx>__filename</span> <span class=o>=</span> <span class=nx>fileURLToPath</span><span class=p>(</span><span class=kr>import</span><span class=p>.</span><span class=nx>meta</span><span class=p>.</span><span class=nx>url</span><span class=p>);</span>
+<span class=kr>const</span> <span class=nx>__dirname</span> <span class=o>=</span> <span class=nx>path</span><span class=p>.</span><span class=nx>dirname</span><span class=p>(</span><span class=nx>__filename</span><span class=p>);</span>
 </code></pre></div>
 </div>
 </main>
