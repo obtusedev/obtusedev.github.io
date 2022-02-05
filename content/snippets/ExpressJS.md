@@ -185,6 +185,20 @@ app.get("/", (req, res, next) => {
 })
 ```
 
+`next()` vs `next("route")`:
+
+```javascript
+next(); // hands it off to the next middleware
+next("route"); // hands it off to the next route middleware/controller
+
+app.get("/", middleware1, middleware2, (req, res) => {
+    // middleware1 can hand it off to middleware2
+    // or next("route") can hand it off to next matching route
+    // credits to
+    // https://stackoverflow.com/questions/11805371/what-is-the-difference-between-next-and-nextroute-in-an-expressjs-app-verb#answers
+});
+```
+
 Run middleware after every request/route:
 
 ```javascript
