@@ -9,7 +9,7 @@
 <meta itemprop=description content="Common project structure/folders:
 src/ models: What your data looks like controllers: seperating routes from logic middleware: general purpose middleware routes: routes grouping like api/v1, api/v2 view: templating engine public: public files, css, favicon configs: configuration files for template engine, db assets: images, video services: db/business logic? I usually put this in models. This can also be for 3rd party api like stripe, aws helper: helper functions /test tests: test for code Some common naming conventions:"><meta itemprop=datePublished content="2022-02-02T00:00:00+00:00">
 <meta itemprop=dateModified content="2022-02-02T00:00:00+00:00">
-<meta itemprop=wordCount content="526">
+<meta itemprop=wordCount content="580">
 <meta itemprop=keywords content="express,javascript,snippets,"><meta property="og:title" content="ExpressJS">
 <meta property="og:description" content="Common project structure/folders:
 src/ models: What your data looks like controllers: seperating routes from logic middleware: general purpose middleware routes: routes grouping like api/v1, api/v2 view: templating engine public: public files, css, favicon configs: configuration files for template engine, db assets: images, video services: db/business logic? I usually put this in models. This can also be for 3rd party api like stripe, aws helper: helper functions /test tests: test for code Some common naming conventions:">
@@ -179,6 +179,16 @@ The order of your middlware is very important.</p>
     <span class=c1>// you can have next but it is rarely needed
 </span><span class=c1></span>    <span class=c1>// since this controller is usually the last middleware
 </span><span class=c1></span><span class=p>})</span>
+</code></pre></div><p><code>next()</code> vs <code>next("route")</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=nx>next</span><span class=p>();</span> <span class=c1>// hands it off to the next middleware
+</span><span class=c1></span><span class=nx>next</span><span class=p>(</span><span class=s2>&#34;route&#34;</span><span class=p>);</span> <span class=c1>// hands it off to the next route middleware/controller
+</span><span class=c1></span>
+<span class=nx>app</span><span class=p>.</span><span class=nx>get</span><span class=p>(</span><span class=s2>&#34;/&#34;</span><span class=p>,</span> <span class=nx>middleware1</span><span class=p>,</span> <span class=nx>middleware2</span><span class=p>,</span> <span class=p>(</span><span class=nx>req</span><span class=p>,</span> <span class=nx>res</span><span class=p>)</span> <span class=p>=&gt;</span> <span class=p>{</span>
+    <span class=c1>// middleware1 can hand it off to middleware2
+</span><span class=c1></span>    <span class=c1>// or next(&#34;route&#34;) can hand it off to next matching route
+</span><span class=c1></span>    <span class=c1>// credits to
+</span><span class=c1></span>    <span class=c1>// https://stackoverflow.com/questions/11805371/what-is-the-difference-between-next-and-nextroute-in-an-expressjs-app-verb#answers
+</span><span class=c1></span><span class=p>});</span>
 </code></pre></div><p>Run middleware after every request/route:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=nx>app</span><span class=p>.</span><span class=nx>use</span><span class=p>(</span><span class=nx>logger</span><span class=p>);</span>
 
