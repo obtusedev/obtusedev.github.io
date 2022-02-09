@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>http on obtusedev</title><link>https://obtuse.dev/tags/http/</link><description>Recent content in http on obtusedev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://obtuse.dev/tags/http/index.xml" rel="self" type="application/rss+xml"/><item><title>CORS - Cross-Origin Resource Sharing</title><link>https://obtuse.dev/posts/cors/</link><pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate><guid>https://obtuse.dev/posts/cors/</guid><description>Examples of same origin request foo.com requesting image on foo.com domain
+Examples of cross origin request
+foo.com fetching data from bar.com localhost:3000 fetching data from server no localhost:5000
+might give a CORS error
+SAME-ORIGIN POLICY - browser security
+foo.com can get images from foo.com but not from other domains like bar.com
+When you make a request there is the Origin header which might look like Origin: foo.com
+Access-Control-Allow-Origin header needs to match Origin header or &amp;lsquo;*&amp;rsquo; wildcard to match any domain in order to get permission</description></item></channel></rss>

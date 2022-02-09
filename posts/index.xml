@@ -1,4 +1,54 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on obtusedev</title><link>https://obtuse.dev/posts/</link><description>Recent content in Posts on obtusedev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 04 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://obtuse.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>humbled</title><link>https://obtuse.dev/posts/1-humbled/</link><pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate><guid>https://obtuse.dev/posts/1-humbled/</guid><description>Went through a course for Go and saw a section on Go comments. Here I thought it was easy and that I knew everything there was about comments in Go. // and /**/ inline blocks and block comments.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on obtusedev</title><link>https://obtuse.dev/posts/</link><description>Recent content in Posts on obtusedev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 09 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://obtuse.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>CORS - Cross-Origin Resource Sharing</title><link>https://obtuse.dev/posts/cors/</link><pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate><guid>https://obtuse.dev/posts/cors/</guid><description>Examples of same origin request foo.com requesting image on foo.com domain
+Examples of cross origin request
+foo.com fetching data from bar.com localhost:3000 fetching data from server no localhost:5000
+might give a CORS error
+SAME-ORIGIN POLICY - browser security
+foo.com can get images from foo.com but not from other domains like bar.com
+When you make a request there is the Origin header which might look like Origin: foo.com
+Access-Control-Allow-Origin header needs to match Origin header or &amp;lsquo;*&amp;rsquo; wildcard to match any domain in order to get permission</description><content type="html"><![CDATA[<p>Examples of <code>same origin request</code>
+foo.com requesting image on foo.com domain</p>
+<p>Examples of <code>cross origin request</code></p>
+<p>foo.com fetching data from bar.com
+localhost:3000 fetching data from server no localhost:5000</p>
+<p>might give a CORS error</p>
+<p>SAME-ORIGIN POLICY - browser security</p>
+<p>foo.com can get images from foo.com but not from other domains like bar.com</p>
+<p>When you make a request there is the Origin header which might look like <code>Origin: foo.com</code></p>
+<p>Access-Control-Allow-Origin header needs to match Origin header or &lsquo;*&rsquo; wildcard to match any domain in order to get permission</p>
+<p>configuring CORS is done on the server</p>
+<p>expressjs example</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;express&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">cors</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;cors&#34;</span><span class="p">);</span>
+
+<span class="c1">// include CORS headers in every response
+</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">({</span> <span class="nx">origin</span><span class="o">:</span> <span class="s2">&#34;https://foo.com&#34;</span> <span class="p">}));</span> <span class="c1">// Access-Control-Allow-Origin: http://localhost:5000
+</span><span class="c1"></span>
+<span class="c1">// you can also just do
+</span><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">cors</span><span class="p">());</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span> <span class="nx">title</span><span class="o">:</span> <span class="s2">&#34;hello world&#34;</span> <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div><p><code>Access-Control-Max-Age</code> header for caching permission during &lsquo;preflight&rsquo;</p>
+<p>Steps:</p>
+<ol>
+<li>Browser sends a &lsquo;preflight&rsquo; check with Options HTTP verb with Origin header</li>
+<li>Server responds with either
+<ol>
+<li>yes the origin can make request with the following options. Then the request is made.
+<ul>
+<li>this may sound inefficient but the server can respond with Access-Control-Max-Age header that lets the browser cache the preflight for certain amount of time.</li>
+</ul>
+</li>
+<li>CORS error.</li>
+</ol>
+</li>
+</ol>
+<p>If you are getting CORS errors then open dev tools and check for &lsquo;Access-Control-Allow-Origin&rsquo; headers.
+If it doesn&rsquo;t exists then you need to enable CORS on server.
+If it does then you may have mismatch url or those methods are not allowed.</p>
+]]></content></item><item><title>humbled</title><link>https://obtuse.dev/posts/1-humbled/</link><pubDate>Fri, 04 Feb 2022 00:00:00 +0000</pubDate><guid>https://obtuse.dev/posts/1-humbled/</guid><description>Went through a course for Go and saw a section on Go comments. Here I thought it was easy and that I knew everything there was about comments in Go. // and /**/ inline blocks and block comments.
 I stand corrected and now I understand the depth of comments in Go. That the documentation comments must end in a period, immediately precede a declaration and start with the name of the item you are documenting.</description><content type="html"><![CDATA[<p>Went through a course for Go and saw a section on Go comments. Here I thought it was easy and that I knew everything there was about comments in Go. <code>//</code> and <code>/**/</code> inline blocks and block comments.</p>
 <p>I stand corrected and now I understand the depth of comments in Go.
 That the documentation comments must end in a period, immediately precede a declaration and start with the name of the item you are documenting.</p>
