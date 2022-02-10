@@ -212,3 +212,27 @@ function logger(req, res, next) {
     console.log("LOGGED");
 }
 ```
+
+Express compact routing
+
+```javascript
+router
+    .route("/user/:id")
+    .get((req, res) => {
+        res.send();
+    })
+    .delete((req, res) => {
+        res.send();
+    });
+
+// same as
+
+router.get("/user/:id", (req, res) => {});
+router.delete("/user/:id", (req, res) => {});
+
+// run this code anytime the params match
+
+router.param("id", (req, res, next, id) => {
+    // maybe log
+});
+```
