@@ -5,22 +5,32 @@
 <meta http-equiv=x-ua-compatible content="ie=edge">
 <meta name=theme-color content="#494F5C">
 <meta name=msapplication-TileColor content="#494F5C">
-<meta itemprop=name content="Snippets">
-<meta itemprop=description content><meta property="og:title" content="Snippets">
-<meta property="og:description" content>
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://obtuse.dev/snippets/">
+<meta itemprop=name content="JavaScript">
+<meta itemprop=description content="Self executing function:
+(async function () { const res = await fetch(&#34;http://httpbin.org/get&#34;); })(); // () can also be inside next to } typeof for undefined:
+console.log(typeof undef); // &#34;undefined&#34; is returned in quotes so be sure not to === undefined Encoding strings safely for urls
+let url = &#34;test?&#34;; encodeURIComponent(url); //=> 'test%3F' ">
+<meta itemprop=wordCount content="52">
+<meta itemprop=keywords content><meta property="og:title" content="JavaScript">
+<meta property="og:description" content="Self executing function:
+(async function () { const res = await fetch(&#34;http://httpbin.org/get&#34;); })(); // () can also be inside next to } typeof for undefined:
+console.log(typeof undef); // &#34;undefined&#34; is returned in quotes so be sure not to === undefined Encoding strings safely for urls
+let url = &#34;test?&#34;; encodeURIComponent(url); //=> 'test%3F' ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://obtuse.dev/snippets/javascript/"><meta property="article:section" content="snippets">
 <meta name=twitter:card content="summary">
-<meta name=twitter:title content="Snippets">
-<meta name=twitter:description content>
+<meta name=twitter:title content="JavaScript">
+<meta name=twitter:description content="Self executing function:
+(async function () { const res = await fetch(&#34;http://httpbin.org/get&#34;); })(); // () can also be inside next to } typeof for undefined:
+console.log(typeof undef); // &#34;undefined&#34; is returned in quotes so be sure not to === undefined Encoding strings safely for urls
+let url = &#34;test?&#34;; encodeURIComponent(url); //=> 'test%3F' ">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=manifest href=/site.webmanifest>
 <link rel=mask-icon href=/safari-pinned-tab.svg color>
 <link rel="shortcut icon" href=/favicon.ico>
-<title>Snippets</title>
-<link rel=alternate type=application/rss+xml href=https://obtuse.dev/snippets/index.xml title=Snippets>
+<title>JavaScript</title>
 <link rel=stylesheet href=https://obtuse.dev/css/style.min.eac77496566fd7d5768fd650ddb0b2b181ca6a2d7c5fdd6fe6b8ba4bf47e566f.css integrity="sha256-6sd0llZv19V2j9ZQ3bCysYHKai18X91v5ri6S/R+Vm8=" crossorigin=anonymous>
 </head>
 <body id=page>
@@ -51,82 +61,18 @@
 </ul>
 </div>
 <main class="site-main section-inner thin animated fadeIn faster">
-<h1>Snippets</h1>
-<div class=posts-group>
-<div class=post-year id=2022>2022</div>
-<ul class=posts-list>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/vue3/>
-<span class=post-title>Vue 3</span>
-<span class=post-day>Feb 2</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/go/>
-<span class=post-title>Go</span>
-<span class=post-day>Feb 2</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/git/>
-<span class=post-title>Git</span>
-<span class=post-day>Feb 2</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/fetch/>
-<span class=post-title>Fetch API</span>
-<span class=post-day>Feb 2</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/expressjs/>
-<span class=post-title>ExpressJS</span>
-<span class=post-day>Feb 2</span>
-</a>
-</li>
-</ul>
-</div>
-<div class=posts-group>
-<div class=post-year id=0001>0001</div>
-<ul class=posts-list>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/server-events/>
-<span class=post-title>Methods to get Server Events</span>
-<span class=post-day>Jan 1</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/linux/>
-<span class=post-title>Linux Commands</span>
-<span class=post-day>Jan 1</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/dom/>
-<span class=post-title>JavaScript DOM manipulations</span>
-<span class=post-day>Jan 1</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/javascript/>
-<span class=post-title>JavaScript</span>
-<span class=post-day>Jan 1</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/docker/>
-<span class=post-title>Docker</span>
-<span class=post-day>Jan 1</span>
-</a>
-</li>
-<li class=post-item>
-<a href=https://obtuse.dev/snippets/css/>
-<span class=post-title></span>
-<span class=post-day>Jan 1</span>
-</a>
-</li>
-</ul>
+<h1>JavaScript</h1>
+<div class=content>
+<p>Self executing function:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=p>(</span><span class=kr>async</span> <span class=kd>function</span> <span class=p>()</span> <span class=p>{</span>
+    <span class=kr>const</span> <span class=nx>res</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>fetch</span><span class=p>(</span><span class=s2>&#34;http://httpbin.org/get&#34;</span><span class=p>);</span>
+<span class=p>})();</span> <span class=c1>// () can also be inside next to }
+</span></code></pre></div><p><code>typeof</code> for undefined:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=k>typeof</span> <span class=nx>undef</span><span class=p>);</span> <span class=c1>// &#34;undefined&#34; is returned in quotes so be sure not to === undefined
+</span></code></pre></div><p>Encoding strings safely for urls</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-javascript data-lang=javascript><span class=kd>let</span> <span class=nx>url</span> <span class=o>=</span> <span class=s2>&#34;test?&#34;</span><span class=p>;</span>
+<span class=nb>encodeURIComponent</span><span class=p>(</span><span class=nx>url</span><span class=p>);</span> <span class=c1>//=&gt; &#39;test%3F&#39;
+</span></code></pre></div>
 </div>
 </main>
 <footer id=site-footer class="section-inner thin animated fadeIn faster">
