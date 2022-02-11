@@ -2,7 +2,6 @@
 title: "Methods to get Server Events"
 ---
 
-
 HTTP polling
 Polling
 Long polling
