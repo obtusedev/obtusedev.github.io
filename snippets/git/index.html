@@ -6,18 +6,27 @@
 <meta name=theme-color content="#494F5C">
 <meta name=msapplication-TileColor content="#494F5C">
 <meta itemprop=name content="Git">
-<meta itemprop=description content="gitk --all "><meta itemprop=datePublished content="2022-02-02T00:00:00+00:00">
+<meta itemprop=description content="Configs: Priority lowest to highest -> system wide (&ndash;system) -> user specific (&ndash;global) -> repo specific (&ndash;local)
+git config --list Help:
+--help // open in new tab full man page help // open in new tab full man page -h // show in terminal git help -a // list all commands Adding to staging:
+git add <file> git add -A git add . git add -u git add -p Check staging:"><meta itemprop=datePublished content="2022-02-02T00:00:00+00:00">
 <meta itemprop=dateModified content="2022-02-02T00:00:00+00:00">
-<meta itemprop=wordCount content="2">
+<meta itemprop=wordCount content="93">
 <meta itemprop=keywords content="git,snippets,"><meta property="og:title" content="Git">
-<meta property="og:description" content="gitk --all ">
+<meta property="og:description" content="Configs: Priority lowest to highest -> system wide (&ndash;system) -> user specific (&ndash;global) -> repo specific (&ndash;local)
+git config --list Help:
+--help // open in new tab full man page help // open in new tab full man page -h // show in terminal git help -a // list all commands Adding to staging:
+git add <file> git add -A git add . git add -u git add -p Check staging:">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://obtuse.dev/snippets/git/"><meta property="article:section" content="snippets">
 <meta property="article:published_time" content="2022-02-02T00:00:00+00:00">
 <meta property="article:modified_time" content="2022-02-02T00:00:00+00:00">
 <meta name=twitter:card content="summary">
 <meta name=twitter:title content="Git">
-<meta name=twitter:description content="gitk --all ">
+<meta name=twitter:description content="Configs: Priority lowest to highest -> system wide (&ndash;system) -> user specific (&ndash;global) -> repo specific (&ndash;local)
+git config --list Help:
+--help // open in new tab full man page help // open in new tab full man page -h // show in terminal git help -a // list all commands Adding to staging:
+git add <file> git add -A git add . git add -u git add -p Check staging:">
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
@@ -57,7 +66,28 @@
 <main class="site-main section-inner thin animated fadeIn faster">
 <h1>Git</h1>
 <div class=content>
-<pre tabindex=0><code>gitk --all
+<p>Configs:
+Priority lowest to highest -> system wide (&ndash;system) -> user specific (&ndash;global) -> repo specific (&ndash;local)</p>
+<pre tabindex=0><code>git config --list
+
+</code></pre><p>Help:</p>
+<pre tabindex=0><code>--help // open in new tab full man page
+help   // open in new tab full man page
+-h     // show in terminal
+git help -a // list all commands
+</code></pre><p>Adding to staging:</p>
+<pre tabindex=0><code>git add &lt;file&gt;
+git add -A
+git add .
+git add -u
+git add -p
+</code></pre><p>Check staging:</p>
+<pre tabindex=0><code>git status
+</code></pre><pre tabindex=0><code>gitk --all
+</code></pre><p>What is <code>git refs</code> inside .git?
+You can <code>git clone</code> local repos</p>
+<pre tabindex=0><code>git clone &lt;remote-repo&gt;
+git clone /path/to/local/folder
 </code></pre>
 </div>
 </main>
